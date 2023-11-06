@@ -1,13 +1,12 @@
-import { createSlice, configureStore, PayloadAction } from "@reduxjs/toolkit"
-import { Player } from "../interfaces/player"
+import { createSlice, configureStore, PayloadAction } from '@reduxjs/toolkit'
+import { Player } from '../interfaces/player'
 
-
-interface InitialState {
+export interface RootState {
     players: Player[]
 }
 
-const initialState: InitialState = {
-    players: []
+const initialState: RootState = {
+    players: [],
 }
 
 //fetchAll(
@@ -34,10 +33,10 @@ const initialState: InitialState = {
 const playerSlice = createSlice({
     name: 'player',
     initialState,
-    reducers: { 
-        getPlayers(state, action: PayloadAction<Player[]>) { 
-            state.players = action.payload 
-        }
+    reducers: {
+        getPlayers(state, action: PayloadAction<Player[]>) {
+            state.players = action.payload
+        },
         // getPlayers: {
         //     reducer(state, action: PayloadAction<Player[]>) {
         //               state.players = action.payload
@@ -46,11 +45,11 @@ const playerSlice = createSlice({
         //                return { payload }
         //              }
         // }
-    } 
+    },
 })
 
 const store = configureStore({
-    reducer : playerSlice.reducer
+    reducer: playerSlice.reducer,
 })
 
 export const playerAction = playerSlice.actions

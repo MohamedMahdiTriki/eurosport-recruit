@@ -23,10 +23,9 @@ const PLAYERS = gql`
     }
 `
 
-
 export const PageContent: FC = () => {
     const { data } = useSuspenseQuery<RootState>(PLAYERS)
-    console.log({data})
+    console.log({ data })
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -37,15 +36,11 @@ export const PageContent: FC = () => {
 
     const players = useSelector((state: RootState) => state.players)
 
-    if (players.length === 0) {
-        return <p>Loading</p>
-    } else {
-        return (
-            <TabsBody>
-                {players.map((player: Player) => (
-                    <CardDefault key={player.id} {...player}></CardDefault>
-                ))}
-            </TabsBody>
-        )
-    }
+    return (
+        <TabsBody>
+            {players.map((player: Player) => (
+                <CardDefault key={player.id} {...player}></CardDefault>
+            ))}
+        </TabsBody>
+    )
 }

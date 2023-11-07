@@ -21,7 +21,9 @@ To run tests:
 cd .\eurosport_recruit\
 npm run test
 
-At the moment, there is an error while testing in PageContent.tsx in line 28
-I am actually working on it
+I left my tests commented because there are errors when excuting them and to see the logic that
+I tried to bring in my unit tests. I tried to mock my request and test another static component.
+It will be an improvement to fix these tests.
+I left dummy tests that work instead.
 
 The app will start on port 5173

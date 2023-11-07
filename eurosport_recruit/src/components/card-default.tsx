@@ -10,7 +10,7 @@ import {
     DialogBody,
     DialogFooter,
 } from '@material-tailwind/react'
-import React from 'react'
+import { useState } from 'react'
 import { Player } from '../interfaces/player'
 
 export function CardDefault({
@@ -25,7 +25,7 @@ export function CardDefault({
     weight,
     height,
 }: Player) {
-    const [open, setOpen] = React.useState(false)
+    const [open, setOpen] = useState(false)
 
     const handleOpen = () => setOpen(!open)
     return (

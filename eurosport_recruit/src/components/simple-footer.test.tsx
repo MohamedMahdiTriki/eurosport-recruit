@@ -1,6 +1,6 @@
 // import { render, screen } from '@testing-library/react';
 // import {describe, expect, test} from '@jest/globals';
-// import SimpleFooter from './simple-footer';
+// import {SimpleFooter} from './simple-footer';
 
 // describe('SimpleFooter component', () => {
 //   test('renders SimpleFooter', () => {

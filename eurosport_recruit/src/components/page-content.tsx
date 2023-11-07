@@ -25,7 +25,6 @@ const PLAYERS = gql`
 
 export const PageContent: FC = () => {
     const { data } = useSuspenseQuery<RootState>(PLAYERS)
-    console.log({ data })
     const dispatch = useDispatch()
 
     useEffect(() => {
